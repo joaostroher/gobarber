@@ -1,18 +1,11 @@
 import styled from 'styled-components';
 import { darken } from 'polished';
 
-export const Wrapper = styled.div`
-  min-height: 100vh;
-  background: linear-gradient(-45deg, #7159c1, #ab59c1);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-`;
-
-export const Content = styled.div`
-  width: 100%;
-  max-width: 315px;
-  text-align: center;
+export const Container = styled.div`
+  max-width: 90%;
+  width: 600px;
+  margin: 0px auto;
+  padding: 50px 0;
 
   form {
     display: flex;
@@ -40,6 +33,13 @@ export const Content = styled.div`
       font-weight: bold;
     }
 
+    hr {
+      border: 0;
+      height: 1px;
+      background: rgba(255, 255, 255, 0.2);
+      margin: 10px 0 20px;
+    }
+
     button {
       margin: 5px 0 0;
       height: 44px;
@@ -57,14 +57,20 @@ export const Content = styled.div`
     }
   }
 
-  a {
+  > button {
+    width: 100%;
+    margin: 10px 0 0;
+    height: 44px;
+    background: #fb6f91;
+    font-weight: bold;
     color: #fff;
-    margin-top: 15px;
+    border: 0;
+    border-radius: 4px;
     font-size: 16px;
-    opacity: 0.8;
+    transition: background 0.2s;
 
     &:hover {
-      opacity: 1;
+      background: ${darken(0.05, '#fb6f91')};
     }
   }
 `;
