@@ -4,9 +4,10 @@
   "main": "index.js",
   "license": "MIT",
   "scripts": {
-    "dev": "nodemon src/server.js",
+    "dev": "npm-run-all --parallel dev:*",
+    "dev:server": "nodemon src/server.js",
     "dev:queue": "nodemon src/queue.js",
-    "dev:debug": "nodemon --inspect src/server.js"
+    "debug:dev:server": "nodemon --inspect src/server.js"
   },
   "dependencies": {
     "@sentry/node": "5.7.1",
@@ -36,6 +37,7 @@
     "eslint-plugin-import": "^2.18.2",
     "eslint-plugin-prettier": "^3.1.1",
     "nodemon": "^1.19.4",
+    "npm-run-all": "^4.1.5",
     "prettier": "^1.18.2",
     "sequelize-cli": "^5.5.1",
     "sucrase": "^3.10.1"
